@@ -1,0 +1,6 @@
+{
+  "name": "LoopStream Studio — 24/7 YouTube Live Loop Controller",
+  "description": "Cloud-ready 24/7 YouTube live stream loop controller with direct MP4 upload, multi-channel scaling (1 to 10 channels), zero-lag FFmpeg copy streaming, and auto-stop timers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

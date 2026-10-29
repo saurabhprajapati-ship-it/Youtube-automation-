@@ -1,0 +1,62 @@
+{
+  "videos": [
+    {
+      "id": "vid-sample-1",
+      "title": "Part 01 — 24/7 Ambient Loop Master (720p 30fps).mp4",
+      "filename": "sample_loop_part1.mp4",
+      "sizeBytes": 380116,
+      "durationSec": 8,
+      "resolution": "1280x720",
+      "fps": 30,
+      "codec": "H.264 / AAC (Copy Ready)",
+      "uploadedAt": "2026-10-29T00:59:45.302Z"
+    },
+    {
+      "id": "vid-sample-2",
+      "title": "Part 02 — Continuous Seamless Loop Segment.mp4",
+      "filename": "sample_loop_part2.mp4",
+      "sizeBytes": 390717,
+      "durationSec": 8,
+      "resolution": "1280x720",
+      "fps": 30,
+      "codec": "H.264 / AAC (Copy Ready)",
+      "uploadedAt": "2026-10-29T00:59:45.302Z"
+    }
+  ],
+  "channels": [
+    {
+      "id": "ch-1",
+      "name": "Channel 1 — Main 24/7 Live",
+      "youtubeChannelLabel": "Primary YouTube Channel",
+      "rtmpUrl": "rtmp://a.rtmp.youtube.com/live2",
+      "streamKey": "",
+      "streamMode": "test_loop",
+      "encodingMode": "copy",
+      "autoReconnect": true,
+      "autoStopMinutes": 5,
+      "playlist": [
+        {
+          "id": "pl-1",
+          "videoId": "vid-sample-1",
+          "enabled": true,
+          "repeatCount": 1
+        },
+        {
+          "id": "pl-2",
+          "videoId": "vid-sample-2",
+          "enabled": true,
+          "repeatCount": 1
+        }
+      ],
+      "status": "idle",
+      "startedAt": null,
+      "endsAt": null,
+      "elapsedSeconds": 0,
+      "remainingSeconds": 300,
+      "loopIterations": 1,
+      "currentVideoIndex": 0,
+      "lastError": null,
+      "commandPreview": "ffmpeg -hide_banner -loglevel warning -re -stream_loop -1 -f concat -safe 0 -i /data/concat/ch-1.txt -t 300 -c:v copy -c:a aac -b:a 128k -ar 44100 -f null -"
+    }
+  ]
+}

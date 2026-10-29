@@ -1,0 +1,13 @@
+{
+  "name": "LoopStream Studio (24/7 YouTube Live Controller)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y ffmpeg && npm install",
+  "postStartCommand": "npm run dev",
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "LoopStream Studio Web UI",
+      "onAutoForward": "openBrowser"
+    }
+  }
+}
